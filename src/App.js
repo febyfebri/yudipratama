@@ -22,7 +22,7 @@ import heroImage from './assets/ImageHero.png';
 
 function App() {
   return (
-    <div className='h-full w-full'>
+    <div id='home' className='h-full w-full'>
       <div className="navbar z-10 absolute overflow-hidden">
         <div className="navbar-start">
           <a className="btn btn-ghost">
@@ -31,10 +31,10 @@ function App() {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-3">
-            <li><a className='text-white text-sm hover:text-[#CB985D] font-montserrat'>Home</a></li>
-            <li><a className='text-white text-sm hover:text-[#CB985D] font-montserrat'>About Me</a></li>
-            <li><a className='text-white text-sm hover:text-[#CB985D] font-montserrat'>My Song</a></li>
-            <li><a className='text-white text-sm hover:text-[#CB985D] font-montserrat'>Gallery</a></li>
+            <li><a href='#home' className='text-white text-sm hover:text-[#CB985D] font-montserrat'>Home</a></li>
+            <li><a href='#about' className='text-white text-sm hover:text-[#CB985D] font-montserrat'>About Me</a></li>
+            <li><a href='#mysong' className='text-white text-sm hover:text-[#CB985D] font-montserrat'>My Song</a></li>
+            <li><a href='#gallery' className='text-white text-sm hover:text-[#CB985D] font-montserrat'>Gallery</a></li>
           </ul>
         </div>
         <div className="navbar-end">
@@ -48,11 +48,11 @@ function App() {
             <h1 className="mb-5 text-5xl font-normal font-montserrat max-sm:text-4xl">Welcome!</h1>
             <h1 className="mb-5 text-5xl font-bold font-montserrat max-sm:text-4xl">I’m <span className='text-[#CB985D]'>Yudi Prata</span></h1>
             <p className='mb-5 font-light font-montserrat'>I’m a singer and songwriter</p>
-            <button className=" border-2 px-8 py-2 rounded-md font-medium font-montserrat">More</button>
+            <a href='#about' className=" border-2 px-8 py-2 rounded-md font-medium font-montserrat hover:border-2 hover:bg-white hover:text-black">More</a>
           </div>
         </div>
       </div>
-      <div className="min-h-screen bg-[#161616] py-40 px-28 max-sm:py-0 max-sm:px-4">
+      <div id='about' className="min-h-screen bg-[#161616] py-40 px-28 max-sm:py-0 max-sm:px-4">
         <div className='flex flex-row max-sm:flex-col'>
           <div className="basis-1/2 space-y-32 pt-24 pl-24 max-sm:space-y-10 max-sm:pt-10 max-sm:pl-0 max-sm:pb-10">
             <h1 className='text-5xl font-bold text-white font-montserrat max-sm:text-2xl'>
@@ -165,7 +165,7 @@ function App() {
           src={bghero}
         />
       </div>
-      <div className=' min-h-screen bg-[#161616] flex flex-col items-center max-sm:min-h-min'>
+      <div id='gallery' className=' min-h-screen bg-[#161616] flex flex-col items-center max-sm:min-h-min'>
         <h1 className='text-[#CB985D] text-3xl font-bold font-montserrat pt-16 pb-20 max-sm:text-2xl max-sm:pt-6 max-sm:pb-10'>Gallery</h1>
         <div className='flex self-start px-40 space-x-3 max-sm:px-6'>
           <img
@@ -208,7 +208,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className='min-h-screen bg-[#0F0F0F] flex flex-col items-center'>
+      <div id='mysong' className='min-h-screen bg-[#0F0F0F] flex flex-col items-center'>
         <div className='flex self-start px-40 space-x-3 py-16 max-sm:px-6'>
           <img
             className=' object-contain'
